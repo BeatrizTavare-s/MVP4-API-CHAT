@@ -7,6 +7,10 @@ const port = process.env.PORT || 3000;
 
 app.use('/chat', limitGlobalDaily); 
 
+app.get('/', (req, res) => {
+  res.send('API online 🔥');
+});
+
 app.get('/chat', async (req: any, res: any) => {
   const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
