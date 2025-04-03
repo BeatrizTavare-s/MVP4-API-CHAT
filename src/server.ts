@@ -3,7 +3,7 @@ import OpenAI from "openai";
 import 'dotenv/config'
 import limitGlobalDaily from './limitGlobalDaily'
 const app = express()
-const port = process.env.PORT || 3000;
+const port = Number(process.env.PORT) || 3000;
 
 // app.use('/chat', limitGlobalDaily); 
 
@@ -11,9 +11,6 @@ app.get('/', (req, res) => {
   res.send('API online 🔥');
 });
 
-process.on('uncaughtException', err => {
-  console.error('Erro não tratado:', err);
-});
 
 // app.get('/chat', async (req: any, res: any) => {
 //   const openai = new OpenAI({
@@ -39,6 +36,9 @@ process.on('uncaughtException', err => {
 //   return res.status(200).send('Not prompt find');
 // })
 
-app.listen(port, () => {
+// })
+console.log(process.env.PORT)
+app.listen(port, '0.0.0.0', () => {
+   console.log(process.env.PORT)
   console.log(`Example app listening on port ${port}`)
 })
