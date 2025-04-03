@@ -11,6 +11,10 @@ app.get('/', (req, res) => {
   res.send('API online 🔥');
 });
 
+process.on('uncaughtException', err => {
+  console.error('Erro não tratado:', err);
+});
+
 // app.get('/chat', async (req: any, res: any) => {
 //   const openai = new OpenAI({
 //     apiKey: process.env.OPENAI_API_KEY,
