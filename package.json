@@ -1,0 +1,23 @@
+{
+  "name": "poc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tsx ./src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.8.4",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "nxp": "^0.6.2",
+    "openai": "^4.91.1",
+    "pg": "^8.14.1"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.3"
+  }
+}
