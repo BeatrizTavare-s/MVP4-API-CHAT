@@ -1,7 +1,7 @@
 import express from 'express'
-import OpenAI from "openai";
+// import OpenAI from "openai";
 import 'dotenv/config'
-import limitGlobalDaily from './limitGlobalDaily'
+// import limitGlobalDaily from './limitGlobalDaily'
 const app = express()
 const port = Number(process.env.PORT) || 3000;
 
