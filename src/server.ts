@@ -7,7 +7,7 @@ const port = 3000
 
 app.use('/chat', limitGlobalDaily); 
 
-app.get('/chat', async (req, res) => {
+app.get('/chat', async (req: any, res: any) => {
   const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
   });

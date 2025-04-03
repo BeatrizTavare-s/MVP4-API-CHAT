@@ -1,6 +1,6 @@
 const db = require('./db');
 const ONE_DAY = 24 * 60 * 60 * 1000;
-async function limitGlobalDaily(req, res, next) {
+async function limitGlobalDaily(req: any, res: any, next: any) {
     try {
 
       await db.query(`
