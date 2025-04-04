@@ -8,7 +8,7 @@ const port = Number(process.env.PORT) || 3000;
 app.use('/chat', limitGlobalDaily); 
 
 app.get('/', (req, res) => {
-  res.send('API online 🔥');
+  res.send({content:'API online 🔥'});
 });
 
 
@@ -27,13 +27,13 @@ app.get('/chat', async (req: any, res: any) => {
         ],
         temperature: 0.7,
       });
-      return res.send(response.choices[0].message.content);
+      return res.json({content:response.choices[0].message.content});
     }catch(err){
       console.error(err);
-      return res.status(500).send('An error occurred');
+      return res.status(500).json({content:'An error occurred'});
     }
   }
-  return res.status(200).send('Not prompt find');
+  return res.status(200).json({content: 'Not prompt find'});
 })
 
 console.log(process.env.PORT)
