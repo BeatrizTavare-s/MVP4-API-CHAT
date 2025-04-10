@@ -36,8 +36,7 @@ app.get('/chat', async (req: any, res: any) => {
   return res.status(200).json({content: 'Not prompt find'});
 })
 
-console.log(process.env.PORT)
 app.listen(port, '0.0.0.0', () => {
    console.log(process.env.PORT)
-  console.log(`Example app listening on port ${port}`)
+  console.log(`API de cronograma de estudos rodando na porta: ${port}`)
 })
