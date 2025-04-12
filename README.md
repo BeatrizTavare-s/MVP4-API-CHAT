@@ -1,7 +1,7 @@
 
 # 🤖 OpenAI Schedule API - Módulo do Projeto Study Content
 
-Esta é a **API Secundária 01** do projeto **Study Content**, desenvolvida em **Node.js + Express** com **PostgreSQL**. Sua função é:
+Esta é a **API Secundária 01** do projeto [Study Content](https://github.com/BeatrizTavare-s/MVP4-backend), desenvolvida em **Node.js + Express** com **PostgreSQL**. Sua função é:
 
 - Gerar cronogramas de estudo utilizando a **API da OpenAI (GPT-4o)**
 - Armazenar no banco de dados a **quantidade de requisições feitas por dia**, para evitar uso excessivo da API da OpenAI
