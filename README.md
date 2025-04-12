@@ -36,9 +36,12 @@ Esta é a **API Secundária 01** do projeto [Study Content](https://github.com/B
 
 2. Configure o `.env`:
    ```
-   PORT=3002
+   PORT=3000
    DATABASE_URL=postgres://usuario:senha@localhost:5432/openai_api
    OPENAI_API_KEY=sua-chave-aqui
+   POSTGRES_USER=value
+   POSTGRES_PASSWORD=value
+   POSTGRES_DB=value
    ```
 
 3. Execute a API:
@@ -50,10 +53,19 @@ Esta é a **API Secundária 01** do projeto [Study Content](https://github.com/B
 
 ## 🐳 Como rodar com Docker
 
-1. Acesse a pasta com backend principal:
+1. Configure o `.env`:
+   ```
+   PORT=3000
+   DATABASE_URL=postgres://usuario:senha@localhost:5432/openai_api
+   OPENAI_API_KEY=sua-chave-aqui
+   POSTGRES_USER=value
+   POSTGRES_PASSWORD=value
+   POSTGRES_DB=value
+
+2. Acesse a pasta com backend principal:
 [Study Content](https://github.com/BeatrizTavare-s/MVP4-backend)
 
-2. Execute o comando para build:
+3. Execute o comando para build:
 ```bash
 docker compose up --build
 ```
