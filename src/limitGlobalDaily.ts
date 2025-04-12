@@ -36,7 +36,7 @@ async function limitGlobalDaily(req: any, res: any, next: any) {
         return next();
       }
   
-      if (count >= 2) {
+      if (count >= 50) {
         return res.status(429).send('Limite diário de uso da API atingido. Tente novamente amanhã.');
       }
   
